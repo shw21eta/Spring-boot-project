@@ -12,7 +12,7 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class WebController {
 	
-	@RequestMapping(value = "/")
+	@RequestMapping(value = "/index")
 	public String index() {
 		return "index";
 	}
