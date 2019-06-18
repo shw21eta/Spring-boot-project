@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">  
+<head>
+
+<title>Welcome user</title>
+
+</head>
+<body>
+	<h1>Welcome User : </h1>
+	<h1 th:text="${user.username}"> </h1>
+	
+	<table>  
+        <tr>  
+            <td><h4>User Name: </h4></td>  
+            <td><h4 th:text="${user.username}"></h4></td>  
+        </tr>  
+        <tr>  
+            <td><h4>Password: </h4></td>  
+            <td><h4 th:text="${user.password}"></h4></td>  
+        </tr>  
+    </table>
+</body>
+</html>
+
+ 

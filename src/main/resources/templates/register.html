@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1" />
+<link href="css/styles.css" rel="stylesheet" />
+
+<title>Spring Boot Application</title>
+</head>
+<body>
+	<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome
+		to Thymeleaf Spring Boot web application</h4>
+	Now is:
+	<b th:text="${execInfo.now.time}"></b>
+
+	<div id="form">
+		<form action="save" th:action="@{/save}" method="post">
+			<h1>Register</h1>
+			<input class="text" type="text"
+				name="username" placeholder="Username" /> <input class="text"
+				type="password" name="password"
+				placeholder="Password" /> <input type="submit" name="submit"
+				value="Sign-Up" class="submit-button" />
+		</form>
+
+		<!-- 		<form action="#" th:action="@{/save}" th:object="${user}"
+			method="post">
+			<label for="username">Name</label> <input type="text"
+				th:field="*{name}" id="name" placeholder="Name"> <span
+				th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span> <label
+				for="email">Email</label> <input type="text" th:field="*{email}"
+				id="email" placeholder="Email"> <span
+				th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span> <input
+				type="submit" value="Add User">
+		</form> -->
+	</div>
+
+</body>
+</html>
